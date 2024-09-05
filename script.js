@@ -16,7 +16,8 @@ function getBMICategory(bmi) {
     }
 }
 
-function handButtonClick() {
+function buttonClick() {
+
     const weight = parseFloat(document.getElementById('weight').value);
     const height = parseFloat(document.getElementById('height').value); 
 
@@ -29,5 +30,5 @@ function handButtonClick() {
     const bmi = calculateBMI(weight, height);
     const category = getBMICategory(bmi);
 
-    document.getElementById('result').innerText = `Your BMI is ${bmi} which means You are ${category}`;
+    document.getElementById('result').innerText = `Your BMI is ${bmi.toFixed(1)} which means You are ${category}`;
 }
