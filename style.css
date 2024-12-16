@@ -6,31 +6,40 @@
 }
 
 body {
+  width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #f4f4f4;
-  margin: 50px 0;
+  min-height: 100vh;
 }
 
 .container {
-  background-color: white;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 50px;
+  padding: 10px 20px;
+}
+
+.calculate {
+  background-color: rgb(238, 252, 255);
+  color: #03394e;
   padding: 20px;
-  margin: 0 40px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.container h1 {
+.calculate h1 {
   text-align: center;
   margin: 10px 0 30px 0;
 }
 
-.container p {
-  margin-bottom: 40px;
-  font-size: 1em;
+.calculate p {
+  margin-bottom: 30px;
   text-align: center;
-  font-weight: 410;
+  font-weight: 500;
 }
 
 form {
@@ -41,58 +50,63 @@ form {
 form label {
   margin-bottom: 10px;
   font-size: 1em;
+  font-weight: 500;
 }
 
 form input {
   margin-bottom: 30px;
   padding: 10px;
-  border: 1px solid #ddd;
+  border: 1px solid #03394e;
   border-radius: 10px;
+}
+
+form input:focus {
+  outline: none;
+  border: 1px solid #03394e;
 }
 
 form button {
   padding: 10px;
   border: none;
   border-radius: 10px;
-  background-color: #007bff;
+  background-color: #276a85;
   color: white;
   margin: 10px 0;
   font-size: 16px;
 }
 
 form button:hover {
-  background-color: #0056b3;
+  background-color: #185269;
 }
 
 #result {
-  margin-top: 20px;
+  margin-top: 10px;
   text-align: center;
   font-size: 1em;
-  font-weight: 410;
-  letter-spacing: 1.5%;
+  font-weight: 500;
 }
 
-.deskripsi {
-  width: 410px;
-  padding: 40px;
+.description {
+  width: 350px;
 }
 
-.deskripsi p {
+.description p {
   margin: 15px 0;
 }
 
-.deskripsi ul {
+.description ul {
   margin: 10px 0 0 20px;
 }
 
-@media screen and (max-width: 800px) {
-  body {
+@media screen and (max-width: 640px) {
+  .container {
     display: flex;
     flex-direction: column;
-    margin: 30px 0;
+    gap: 20px;
+    padding: 20px;
   }
 
-  .deskripsi {
-    width: 70%;
+  .description {
+    width: 90%;
   }
 }
